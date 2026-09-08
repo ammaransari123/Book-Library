@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PageNest</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">📚 PageNest</div>
+        <p>Manage your favorite books in one place</p>
+    </header>
+
+    <main>
+
+        <!-- Statistics -->
+        <section class="stats">
+
+            <div class="stat-box">
+                <h3 id="totalBooks">0</h3>
+                <p>Total Books</p>
+            </div>
+
+            <div class="stat-box">
+                <h3 id="availableBooks">0</h3>
+                <p>Available</p>
+            </div>
+
+            <div class="stat-box">
+                <h3 id="borrowedBooks">0</h3>
+                <p>Borrowed</p>
+            </div>
+
+        </section>
+
+
+        <!-- Search and Filter -->
+        <section class="controls">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search by title or author..."
+            >
+
+            <select id="categoryFilter">
+                <option value="all">All Categories</option>
+                <option value="Fiction">Fiction</option>
+                <option value="Science">Science</option>
+                <option value="History">History</option>
+                <option value="Technology">Technology</option>
+                <option value="Romance">Romance</option>
+            </select>
+
+            <button id="addBookBtn">+ Add Book</button>
+
+        </section>
+
+
+        <!-- Books -->
+        <section>
+            <h2>My Books</h2>
+
+            <div id="bookContainer" class="book-container"></div>
+
+        </section>
+
+
+        <!-- Borrowing History -->
+        <section class="history-section">
+
+            <h2>Borrowing History</h2>
+
+            <div id="historyContainer">
+                <p class="empty-message">
+                    No borrowing history yet.
+                </p>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Add Book Modal -->
+    <div id="bookModal" class="modal">
+
+        <div class="modal-content">
+
+            <span id="closeModal" class="close">&times;</span>
+
+            <h2>Add New Book</h2>
+
+            <form id="bookForm">
+
+                <input
+                    type="text"
+                    id="bookTitle"
+                    placeholder="Book title"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="bookAuthor"
+                    placeholder="Author name"
+                    required
+                >
+
+                <select id="bookCategory" required>
+
+                    <option value="">Select Category</option>
+                    <option value="Fiction">Fiction</option>
+                    <option value="Science">Science</option>
+                    <option value="History">History</option>
+                    <option value="Technology">Technology</option>
+                    <option value="Romance">Romance</option>
+
+                </select>
+
+                <button type="submit">Add Book</button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
